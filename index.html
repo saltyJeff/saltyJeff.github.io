@@ -4,31 +4,89 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
+		<link href="css/content.css" rel="stylesheet">
 		<script src="js/microflux.min.js"></script>
 		<script async defer src="js/main.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<noscript>
-			<h1>Enable JS to use this page (I can't afford a web server to do this on the server side)</h1>
+			<h1>Enable JS to use this page on mobile</h1>
 		</noscript>
 		<nav id="nav">
-			<div id="closeWrapper">
-				<a id="closeButton"><i class="material-icons" style="cursor: pointer">close</i></a>
+			<div id="infoWrapper">
+				<div class="spacer"></div>
+				<div id="info">
+					<img src="img/jeff_head.png" id="head" />
+					<span>Jefferson Lee</span>
+				</div>
+				<div class="spacer"></div>
 			</div>
-			<a class="navButton">About Me</a>
-			<a class="navButton">Portfolio</a>
-			<a class="navButton">Contact</a>
+			<a class="navButton" href="#about-me">About Me</a>
+			<a class="navButton" href="#projects">Projects</a>
+			<a class="navButton" href="#contact">Contact</a>
 		</nav>
 		<div id="contentWrapper">
-			<div id="appbar">
-				<i class="material-icons" style="cursor: pointer" id="menuButton">menu</i>
-				<span class="spacer"></span>
-				<span id="title">Jefferson Lee</span>
+			<i id="menuButton" class="material-icons" style="cursor: pointer">menu</i>
+			<div id="content">
+				<h1 id="about-me">About Me</h1>
+				<p>
+					Woodbridge High Class of 2018, currently residing in Irvine, CA
+				</p>
+				<p>
+					I'm a high school student looking for some work experience.
+					If you're a project manager looking for <s>some free labor</s> someone to
+					teach, hit the contact button in the side menu.
+				</p>
+				<h2>Dev Experience</h2>
+				<h3>(Formal) Education</h3>
+				<ul>
+					<li>5 on the AP Computer Science A exam</li>
+					<li>
+						Currently taking Honors Computer Science Data Structures in high school,
+						as well as ET 120-Introduction to Microprocessors and Microcontrollers at Irvine Valley College
+					</li>
+				</ul>
+				<h3>Video game development</h3>
+				<ul>
+					<li>Unity3d with C# and Android Java plugins</li>
+					<li>Gamemaker with GML script</li>
+				</ul>
+				<h3>General Purpose Languages</h3>
+				<ul>
+					<li>C# (.NET Core)</li>
+					<li>Java/Kotlin</li>
+					<li>Golang</li>
+				</ul>
+				<h3>Web Backends</h3>
+				<ul>
+					<li>Node js with Typescript, Express, and WebSockets</li>
+					<li>MongoDB, Postgres, MySQL</li>
+				</ul>
+				<h3>DevOps</h3>
+				<ul>
+					<li>Docker</li>
+					<li>BASH/SSH</li>
+				</ul>
+				<h3>Frontend</h3>
+				<p>(In case you were wondering, this site was written in vanilla JS and CSS)</p>
+				<ul>
+					<li>ReactJS</li>
+					<li>Riot</li>
+					<li>jQuery</li>
+					<li>NPM, Webpack, Gulp, Typescript</li>
+				</ul>
+				<h3>Misc.</h3>
+				<ul>
+					<li>Git for source control</li>
+				</ul>
+				<h1 id="projects">Projects</h1>
+				<h1 id="contact">Contact</h1>
+				<iframe 
+					src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
+					frameborder="0" marginheight="0" marginwidth="0" id="contactFrame"
+				>Loading...</iframe>
 			</div>
-			<iframe id="frame" frameBorder="0">
-				Please enable iFrames to use this page (I can't afford a web server to do this on the server side)
-			</iframe>
 		</div>
 	</body>
 </html>

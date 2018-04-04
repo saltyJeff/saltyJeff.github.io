@@ -20,7 +20,6 @@ window.store = MicroFlux({
 	Menu
 */
 let menu = document.querySelector('#nav')
-let closeButton = document.querySelector('#closeButton')
 store.on('toggleMenu', function (store) {
 	//menu.style.display = store.menuOpen ? 'block' : 'none'
 	menu.style.width = store.menuOpen ? '300px' : '0px'
@@ -34,25 +33,9 @@ let menuButton = document.querySelector('#menuButton')
 menuButton.onclick = function () {
 	store.toggleMenu()
 }
-closeButton.onclick = function () {
-	store.toggleMenu()
-}
-
-/*
-	Routing
-*/
-let titleText = document.querySelector('#title')
-let frame = document.querySelector('#frame')
-store.on('routeTo', function(store) {
-	window.location.hash = store.page
-	frame.src = store.page+".html"
-})
-for(let i = 1; i < menu.children.length; i++) {
-	let elem = menu.children[i]
-	let pageName = menu.children[i].textContent.trim().replace(' ','-').toLowerCase()
-	elem.onclick = function () {
-		console.log(pageName)
-		store.routeTo(pageName)
+let navButtons = document.querySelectorAll('#nav > a');
+for(let i = 0; i < navButtons.length; i++) {
+	navButtons[i].onclick = function () {
+		store.toggleMenu()
 	}
 }
-store.routeTo('about-me')

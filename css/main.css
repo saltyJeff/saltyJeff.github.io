@@ -14,22 +14,31 @@ body {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+}
+#content {
+	flex: 1;
+	position: relative;
+	overflow-y: auto;
+	padding-left: 10px;
+	background-color: black;
+	color: white;
 }
 #appbar {
-	display: flex;
-	flex-direction: row;
-	height: 40px;
-	line-height: 40px;
-	padding: 20px;
-	background-color: #9300E8;
-	color: white;
-	font-size: 30px;
+	background-color: black;
 }
-#appbar > i {
+#menuButton {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 50px;
+	width: 50px;
 	font-size: 40px;
-}
-span.spacer {
-	flex: 1
+	line-height: 50px;
+	text-align: center;
+	background-color: grey;
+	color: white;
+	z-index: 1;
 }
 #nav {
 	opacity: 0;
@@ -45,27 +54,41 @@ span.spacer {
 #nav.open {
 	width: 300px;
 }
+#infoWrapper {
+	width: 100%;
+	font-size: 20px;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+#info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#head {
+	display: block;
+	border-radius: 50%;
+	border: 3px solid limegreen;
+	height: 120px;
+	width: 120px;
+	margin: 0px;
+	background-color: white;
+}
+.spacer {
+	flex: 1;
+}
 @media screen and (max-width: 760px) {
 	#nav {
 		position: absolute;
 		top: 0px;
 		left: 0px;
 	}
-}
-#closeWrapper {
-	height: 80px;
-	width: 100%;
-}
-#closeButton, #closeButton > i {
-	display: block;
-	height: 70px;
-	width: 70px;
-	margin-left: auto;
-	display: block;
-	padding-top: 5px;
-	padding-right: 10px;
-	color: white;
-	font-size: 60px;
+	#infoWrapper {
+		margin-top: 60px;
+	}
 }
 a.navButton {
 	display: block;
@@ -79,10 +102,9 @@ a.navButton {
 	height: 40px;
 	padding: 8px 8px 8px 32px;
 	font-size: 25px;
+	text-decoration-line: none;
 }
 a.navButton:hover {
 	background-color: black;
-}
-#frame {
-	flex: 1;
+	border-right: 2px solid lightgrey;
 }
