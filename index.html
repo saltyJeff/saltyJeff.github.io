@@ -3,22 +3,32 @@
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<style>
-				html, body {
-					height: 100%;
-					width: 100%;
-					font-family: sans-serif;
-					margin: 0px;
-					padding: 0px;
-				}
-				#app {
-					height: 100%;
-					width: 100%;
-				}
-			</style>
-		<script async defer src="bundle.js"></script>
+		<link href="css/main.css" rel="stylesheet">
+		<script src="js/microflux.min.js"></script>
+		<script async defer src="js/main.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<div id="app" />
+		<noscript>
+			<h1>Enable JS to use this page (I can't afford a web server to do this on the server side)</h1>
+		</noscript>
+		<nav id="nav">
+			<div id="closeWrapper">
+				<a id="closeButton"><i class="material-icons" style="cursor: pointer">close</i></a>
+			</div>
+			<a class="navButton">About Me</a>
+			<a class="navButton">Portfolio</a>
+			<a class="navButton">Contact</a>
+		</nav>
+		<div id="contentWrapper">
+			<div id="appbar">
+				<i class="material-icons" style="cursor: pointer" id="menuButton">menu</i>
+				<span class="spacer"></span>
+				<span id="title">Jefferson Lee</span>
+			</div>
+			<iframe id="frame" frameBorder="0">
+				Please enable iFrames to use this page (I can't afford a web server to do this on the server side)
+			</iframe>
+		</div>
 	</body>
 </html>
