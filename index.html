@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
-		<link href="css/content.css" rel="stylesheet">
-		<script src="js/microflux.min.js"></script>
-		<script async defer src="js/main.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-		<noscript>
-			<h1>Enable JS to use this page on mobile</h1>
-		</noscript>
-		<nav id="nav">
-			<div id="infoWrapper">
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/content.css" rel="stylesheet">
+	<script src="js/microflux.min.js"></script>
+	<script async defer src="js/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<noscript>
+		<h1>Enable JS to use this page on mobile</h1>
+	</noscript>
+	<nav id="nav">
+		<div id="infoWrapper">
+			<div id="topInfoWrapper">
 				<div class="spacer"></div>
 				<div id="info">
 					<img src="img/jeff_head.png" id="head" />
@@ -22,71 +25,112 @@
 				</div>
 				<div class="spacer"></div>
 			</div>
-			<a class="navButton" href="#about-me">About Me</a>
-			<a class="navButton" href="#projects">Projects</a>
-			<a class="navButton" href="#contact">Contact</a>
-		</nav>
-		<div id="contentWrapper">
-			<i id="menuButton" class="material-icons" style="cursor: pointer">menu</i>
-			<div id="content">
-				<h1 id="about-me">About Me</h1>
-				<p>
-					Woodbridge High Class of 2018, currently residing in Irvine, CA
-				</p>
-				<p>
-					I'm a high school student looking for some work experience.
-					If you're a project manager looking for <s>some free labor</s> someone to
-					teach, hit the contact button in the side menu.
-				</p>
-				<h2>Dev Experience</h2>
-				<h3>(Formal) Education</h3>
-				<ul>
-					<li>5 on the AP Computer Science A exam</li>
-					<li>
-						Currently taking Honors Computer Science Data Structures in high school,
-						as well as ET 120-Introduction to Microprocessors and Microcontrollers at Irvine Valley College
-					</li>
-				</ul>
-				<h3>Video game development</h3>
-				<ul>
-					<li>Unity3d with C# and Android Java plugins</li>
-					<li>Gamemaker with GML script</li>
-				</ul>
-				<h3>General Purpose Languages</h3>
-				<ul>
-					<li>C# (.NET Core)</li>
-					<li>Java/Kotlin</li>
-					<li>Golang</li>
-				</ul>
-				<h3>Web Backends</h3>
-				<ul>
-					<li>Node js with Typescript, Express, and WebSockets</li>
-					<li>MongoDB, Postgres, MySQL</li>
-				</ul>
-				<h3>DevOps</h3>
-				<ul>
-					<li>Docker</li>
-					<li>BASH/SSH</li>
-				</ul>
-				<h3>Frontend</h3>
-				<p>(In case you were wondering, this site was written in vanilla JS and CSS)</p>
-				<ul>
-					<li>ReactJS</li>
-					<li>Riot</li>
-					<li>jQuery</li>
-					<li>NPM, Webpack, Gulp, Typescript</li>
-				</ul>
-				<h3>Misc.</h3>
-				<ul>
-					<li>Git for source control</li>
-				</ul>
-				<h1 id="projects">Projects</h1>
-				<h1 id="contact">Contact</h1>
-				<iframe 
-					src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
-					frameborder="0" marginheight="0" marginwidth="0" id="contactFrame"
-				>Loading...</iframe>
+			<div id="links">
+				<a href="https://github.com/saltyJeff">
+					<img src="img/github.png" alt="link to saltyJeff @ Github"/>
+				</a>
+				<a href="https://www.linkedin.com/in/jefferson-lee-a30466155/">
+					<img src="img/linkedin.png" alt="link to Jefferson Lee @ LinkedIn"/>
+				</a>
 			</div>
 		</div>
-	</body>
+		<a class="navButton" href="#about-me">About Me</a>
+		<a class="navButton" href="#experience">Experience</a>
+		<a class="navButton" href="#projects">Projects</a>
+		<a class="navButton" href="#contact">Contact</a>
+	</nav>
+	<div id="contentWrapper">
+		<i id="menuButton" class="material-icons" style="cursor: pointer">menu</i>
+		<div id="content">
+			<div id="about-me">
+				<div id="aboutContent">
+					<h1 class="aboutTitle">Jefferson Lee</h1>
+					<p>Programmer, Sci-Fi nerd, Panda afficionado</p>
+					<p>Woodbridge High Class of 2018, currently residing in Irvine, CA</p>
+					<h2>About Me</h1>
+						<p>
+							I'm a high school student who's currently taking courses at Irvine
+							Valley College and looking for some work experience. If you're a project manager and willing to teach someone, please
+							go to the contact button in the side menu.
+						</p>
+				</div>
+				<a href="#experience" id="aboutDown">
+					<i class="material-icons">arrow_drop_down_circle</i>
+				</a>
+			</div>
+			<p>By User:jballeis (Own work) <a href="https://creativecommons.org/licenses/by-sa/3.0">[CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]</a>, via Wikimedia Commons</p>
+			<h1 id="experience">Experience</h1>
+			<div id="xpWrapper">
+				<div class="xp">
+					<h2>Education</h2>
+					<ul>
+						<li>5 on the AP Computer Science A exam</li>
+						<li>Honors Computer Science Data Structures (High School)</li>
+						<li>ET 122A-Embedded Control Systems I (IVC)</li>
+						<li>ET 120-Introduction to Microprocessorsand Microcontrollers (IVC)</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>Hardware Programming</h2>
+					<ul>
+						<li>First Tech Challenge (FTC) Programmer</li>
+						<li>Microchip PIC 18 assembly</li>
+						<li>68hc assembly</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>Video game development</h2>
+					<ul>
+						<li>Unity3d with C# and Android Java plugins</li>
+						<li>Gamemaker with GML script</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>General Purpose Languages</h2>
+					<ul>
+						<li>C# (.NET Core)</li>
+						<li>Java/Kotlin</li>
+						<li>Golang</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>Web Backends</h2>
+					<ul>
+						<li>Node js with Typescript, Express, and WebSockets</li>
+						<li>MongoDB, Postgres, MySQL</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>DevOps</h2>
+					<ul>
+						<li>Docker</li>
+						<li>BASH/SSH</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>Frontend</h2>
+					<p>(In case you were wondering, this site was written in vanilla JS and CSS)</p>
+					<ul>
+						<li>ReactJS</li>
+						<li>Riot</li>
+						<li>jQuery</li>
+						<li>NPM, Webpack, Gulp, Typescript</li>
+						<li>Mobile and responsive design (try resizing this site)</li>
+					</ul>
+				</div>
+				<div class="xp">
+					<h2>Misc.</h2>
+					<ul>
+						<li>Git for source control</li>
+					</ul>
+				</div>
+			</div>
+			<h1 id="projects">Projects</h1>
+			<h1 id="contact">Contact Google Form</h1>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
+			    frameborder="0" marginheight="0" marginwidth="0" id="contactFrame">Loading...</iframe>
+		</div>
+	</div>
+</body>
+
 </html>
