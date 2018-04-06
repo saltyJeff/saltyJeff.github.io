@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/content.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/favicon.png">
 	<script src="js/microflux.min.js"></script>
 	<script async defer src="js/main.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
 	<noscript>
 		<h1>Enable JS to use this page on mobile</h1>
@@ -45,12 +44,12 @@
 			<div id="about-me">
 				<div id="aboutContent">
 					<h1 class="aboutTitle">Jefferson Lee</h1>
-					<p>Programmer, Sci-Fi nerd, Panda afficionado</p>
+					<p><i>Programmer, Sci-Fi nerd, Panda afficionado</i></p>
 					<p>Woodbridge High Class of 2018, currently residing in Irvine, CA</p>
 					<h2>About Me</h1>
 						<p>
 							I'm a high school student who's currently taking courses at Irvine
-							Valley College and looking for some work experience. If you're a project manager and willing to teach someone, please
+							Valley College and looking for some work experience. If you're a project manager and take on an unpaid intern, please
 							go to the contact button in the side menu.
 						</p>
 				</div>
@@ -61,76 +60,31 @@
 			<p>By User:jballeis (Own work) <a href="https://creativecommons.org/licenses/by-sa/3.0">[CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]</a>, via Wikimedia Commons</p>
 			<h1 id="experience">Experience</h1>
 			<div id="xpWrapper">
-				<div class="xp">
-					<h2>Education</h2>
-					<ul>
-						<li>5 on the AP Computer Science A exam</li>
-						<li>Honors Computer Science Data Structures (High School)</li>
-						<li>ET 122A-Embedded Control Systems I (IVC)</li>
-						<li>ET 120-Introduction to Microprocessorsand Microcontrollers (IVC)</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>Hardware Programming</h2>
-					<ul>
-						<li>First Tech Challenge (FTC) Programmer</li>
-						<li>Microchip PIC 18 assembly</li>
-						<li>68hc assembly</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>Video game development</h2>
-					<ul>
-						<li>Unity3d with C# and Android Java plugins</li>
-						<li>Gamemaker with GML script</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>General Purpose Languages</h2>
-					<ul>
-						<li>C# (.NET Core)</li>
-						<li>Java/Kotlin</li>
-						<li>Golang</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>Web Backends</h2>
-					<ul>
-						<li>Node js with Typescript, Express, and WebSockets</li>
-						<li>MongoDB, Postgres, MySQL</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>DevOps</h2>
-					<ul>
-						<li>Docker</li>
-						<li>BASH/SSH</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>Frontend</h2>
-					<p>(In case you were wondering, this site was written in vanilla JS and CSS)</p>
-					<ul>
-						<li>ReactJS</li>
-						<li>Riot</li>
-						<li>jQuery</li>
-						<li>NPM, Webpack, Gulp, Typescript</li>
-						<li>Mobile and responsive design (try resizing this site)</li>
-					</ul>
-				</div>
-				<div class="xp">
-					<h2>Misc.</h2>
-					<ul>
-						<li>Git for source control</li>
-					</ul>
-				</div>
+				
 			</div>
 			<h1 id="projects">Projects</h1>
-			<h1 id="contact">Contact Google Form</h1>
+			<div id="projectWrapper">
+				<div class="project">
+					<div class="projectImg" style="background-image: url('img/healthid.gif');"></div> 
+					<div class="projectDesc">
+						<h3>HealthID</h3> 
+						<p>App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon</p> 
+					</div>
+					<i class="material-icons expandProject"
+						onclick="toggleProject(this)">keyboard_arrow_right</i>
+				</div>
+			</div>
+			<h1 id="contact">Contact</h1>
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
 			    frameborder="0" marginheight="0" marginwidth="0" id="contactFrame">Loading...</iframe>
 		</div>
 	</div>
+	<template id="xpTemplate">
+		<div class="xp">
+			<h2>Education</h2>
+			<ul>
+			</ul>
+		</div>
+	</template>
 </body>
-
 </html>

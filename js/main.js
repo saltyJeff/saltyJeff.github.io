@@ -15,13 +15,13 @@ window.store = MicroFlux({
 /*
 	Menu
 */
-let menu = document.querySelector('#nav')
+var menu = document.querySelector('#nav')
 store.on('toggleMenu', function (store) {
 	//menu.style.display = store.menuOpen ? 'block' : 'none'
 	menu.style.width = store.menuOpen ? '300px' : '0px'
 	menu.style.opacity = store.menuOpen ? 1 : 0
 })
-let bigScreen = document.body.clientWidth > 700;
+var bigScreen = document.body.clientWidth > 700;
 window.onresize = function () {
 	bigScreen = document.body.clientWidth > 700;
 }
@@ -29,15 +29,50 @@ window.onresize = function () {
 if(bigScreen) {
 	store.toggleMenu()
 }
-let menuButton = document.querySelector('#menuButton')
+var menuButton = document.querySelector('#menuButton')
 menuButton.onclick = function () {
 	store.toggleMenu()
 }
-let navButtons = document.querySelectorAll('#nav > a');
-for(let i = 0; i < navButtons.length; i++) {
+var navButtons = document.querySelectorAll('#nav > a');
+for(var i = 0; i < navButtons.length; i++) {
 	navButtons[i].onclick = function () {
 		if(!bigScreen) {
 			store.toggleMenu()
 		}
+	}
+}
+
+/*
+	Fill with content
+*/
+var xpTemplate = document.querySelector('#xpTemplate')
+var xpWrapper = document.querySelector('#xpWrapper')
+
+fetch("content.json")
+	.then(function(res) {return res.json()})
+	.then(function(content)  {
+		Object.keys(content.experience).forEach(function(xp) {
+			var details = content.experience[xp]
+			var templateContent = xpTemplate.content.cloneNode(true)
+			templateContent.querySelector('h2').textContent = xp
+			var detailList = templateContent.querySelector('ul')
+			details.forEach(function (deet) {
+				var li = document.createElement('li')
+				li.textContent = deet
+				detailList.appendChild(li)
+			})	
+    		xpWrapper.appendChild(
+        		document.importNode(templateContent, true))
+		});
+	})
+
+function toggleProject(e) {
+	var project = e.parentElement;
+	var expanded = project.style.width == '100%'
+	if(expanded) {
+		project.style.width = '100%'
+	}
+	else {
+		project.style.width = '100%'
 	}
 }

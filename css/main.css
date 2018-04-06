@@ -20,8 +20,8 @@ body {
 	flex: 1;
 	position: relative;
 	overflow-y: auto;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	scroll-behavior: smooth;
 	padding-left: 10px;
 }
@@ -75,11 +75,11 @@ body {
 #head {
 	display: block;
 	border-radius: 50%;
-	border: 3px solid limegreen;
+	border: 2px solid white;
 	height: 120px;
 	width: 120px;
 	margin: 0px;
-	background-color: white;
+	background: radial-gradient(lightskyblue, lightblue, white);
 }
 #links {
 	height: 40px;

@@ -1,0 +1,42 @@
+{
+	"experience": {
+		"Education": [
+			"5 on the AP Computer Science A exam",
+			"Honors Computer Science Data Structures (High School)",
+			"ET 122A-Embedded Control Systems I (IVC)",
+			"ET 120-Introduction to Microprocessorsand Microcontrollers (IVC)"
+		],
+		"Hardware Programming": [
+			"First Tech Challenge (FTC) Programmer",
+			"Microchip PIC 18 assembly",
+			"68hc assembly"
+		],
+		"Video Game Development": [
+			"Unity3d with C# and Android Java Plugins",
+			"Gamemaker with GML"
+		],
+		"General Purposes Languages": [
+			"C# (.NET Core",
+			"Java/Kotlin",
+			"Go"
+		],
+		"Web Backends": [
+			"NodeJS with Typescript, Express, WebSockets",
+			"MongoDB, Postgres, MySQL"
+		],
+		"DevOps": [
+			"Docker",
+			"Bash/SSH"
+		],
+		"Frontend": [
+			"ReactJS",
+			"Riot",
+			"jQuery",
+			"NPM, Webpack, Gulp",
+			"Mobile/Responsive Design"
+		],
+		"Misc.": [
+			"Git for Version Control"
+		]
+	}
+}
