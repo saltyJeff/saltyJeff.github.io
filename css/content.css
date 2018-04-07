@@ -66,44 +66,61 @@ div.xp:hover {
 div.xp > h2 {
 	text-align: center;
 }
-#projectWrapper {
+#projWrapper {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 .project {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	height: 400px;
+	height: 530px;
+	width: 300px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	margin: 20px;
-	transition: 0.5s;
-	transition-timing-function: cubic-bezier(0.45, 0, 0.2, 1);
+	transition: height 1s;
 }
 .project:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.projectImg {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
-	flex: 1;
-	width: 300px;
+.projectCard {
+	height: 450px;
+	width: 100%;
+	overflow: hidden;
+}
+.projectCard > img {
+	display: block;
+	margin: auto auto;
+	height: calc(100% - 80px);
+	width: auto;
+	text-align: center;
+}
+.projectCard > h2 {
+	height: 60px;
+	margin: 3px;
+	padding-left: 10px;
+	font-size: 30px;
 }
 .projectDesc {
-	height: 150px;
-	width: 0px;
-	overflow: auto;
-}
-.projectDesc > h3 {
-	font-size: 25px;
-}
-.projectDesc > p {
-	font-size: 14px;
+	flex-grow: 0;
+	flex-shrink: 1;
+	overflow: hidden;
+	transition: all 1s;
+	font-size: 18px;
+	height: 0px;
+	margin: 0px;
 }
 .expandProject {
 	font-size: 80px;
-	width: 80px;
-	line-height: 400px;
+	width: 100%;
+	line-height: 80px;
 	cursor: pointer;
+	height: 50px;
+	text-align: center;
+}
+.expandProj > .projectDesc {
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 5px;
 }

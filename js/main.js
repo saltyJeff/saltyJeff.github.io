@@ -47,10 +47,13 @@ for(var i = 0; i < navButtons.length; i++) {
 */
 var xpTemplate = document.querySelector('#xpTemplate')
 var xpWrapper = document.querySelector('#xpWrapper')
+var projTemplate = document.querySelector('#projTemplate')
+var projWrapper = document.querySelector('#projWrapper')
 
 fetch("content.json")
 	.then(function(res) {return res.json()})
 	.then(function(content)  {
+		//render experience
 		Object.keys(content.experience).forEach(function(xp) {
 			var details = content.experience[xp]
 			var templateContent = xpTemplate.content.cloneNode(true)
@@ -64,15 +67,56 @@ fetch("content.json")
     		xpWrapper.appendChild(
         		document.importNode(templateContent, true))
 		});
+		//render projects
+		Object.keys(content.projects).forEach(function(proj) {
+			var details = content.projects[proj]
+			var templateContent = projTemplate.content.cloneNode(true)
+			templateContent.querySelector('h2').textContent = proj
+			var detailList = templateContent.querySelector('p')
+			detailList.textContent = details.desc
+			var projImg = templateContent.querySelector('img')
+			projImg.src = details.img
+    		projWrapper.appendChild(
+        		document.importNode(templateContent, true))
+		});
 	})
 
-function toggleProject(e) {
-	var project = e.parentElement;
-	var expanded = project.style.width == '100%'
-	if(expanded) {
-		project.style.width = '100%'
+/*
+	Opening/Closing projects
+*/
+var currentProj = undefined;
+
+function toggleProj(proj) {
+	var expanded = proj.classList.contains('expandProj')
+	if (proj == currentProj) {
+		if (expanded) {
+			closeProj(proj)
+		} else {
+			openProj(proj)
+		}
+		return
 	}
-	else {
-		project.style.width = '100%'
+	if (currentProj) {
+		closeProj(currentProj)
 	}
+	openProj(proj)
+	currentProj = proj
+}
+
+function openProj(proj) {
+	var desc = proj.querySelector('.projectDesc')
+	desc.style.height = 'auto'
+	console.log(desc.clientHeight)
+	var descHeight = Math.min(desc.offsetHeight+20, 400)
+	proj.style.height = 530 + descHeight + 'px'
+
+	proj.classList.toggle('expandProj', true)
+	proj.querySelector('.expandProject').textContent = 'keyboard_arrow_up'
+}
+
+function closeProj(proj) {
+	proj.classList.toggle('expandProj', false)
+	proj.querySelector('.expandProject').textContent = 'keyboard_arrow_down'
+	proj.style.height = '530px';
+	proj.querySelector('.projectDesc').style.height = 0
 }

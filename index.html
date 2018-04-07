@@ -63,16 +63,8 @@
 				
 			</div>
 			<h1 id="projects">Projects</h1>
-			<div id="projectWrapper">
-				<div class="project">
-					<div class="projectImg" style="background-image: url('img/healthid.gif');"></div> 
-					<div class="projectDesc">
-						<h3>HealthID</h3> 
-						<p>App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon</p> 
-					</div>
-					<i class="material-icons expandProject"
-						onclick="toggleProject(this)">keyboard_arrow_right</i>
-				</div>
+			<div id="projWrapper">
+				
 			</div>
 			<h1 id="contact">Contact</h1>
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
@@ -84,6 +76,18 @@
 			<h2>Education</h2>
 			<ul>
 			</ul>
+		</div>
+	</template>
+	<template id="projTemplate">
+		<div class="project">
+			<div class="projectCard">
+				<img/>
+				<hr>
+				<h2></h2>
+			</div>
+			<p class="projectDesc"> </p>
+			<i class="material-icons expandProject"
+				onclick="toggleProj(this.parentElement)">keyboard_arrow_down</i>
 		</div>
 	</template>
 </body>

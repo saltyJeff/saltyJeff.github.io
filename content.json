@@ -38,5 +38,19 @@
 		"Misc.": [
 			"Git for Version Control"
 		]
+	},
+	"projects": {
+		"Health ID": {
+			"img": "img/healthid.gif",
+			"desc": "App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon"
+		},
+		"A ID": {
+			"img": "img/healthid.gif",
+			"desc": "App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon"
+		},
+		"HeBalth ID": {
+			"img": "img/healthid.gif",
+			"desc": "App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon"
+		}
 	}
 }
