@@ -70,15 +70,17 @@ div.xp > h2 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	position: relative;
 }
 .project {
+	background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	height: 530px;
 	width: 350px;
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
-	transition: height 1s;
+	transition: height 1s, width 0.5s;
 }
 .project:hover {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -123,7 +125,7 @@ div.xp > h2 {
 	height: 50px;
 	text-align: center;
 }
-.expandProj > .projectDesc {
-	flex: 1;
-	padding: 5px;
+.expandProj {
+	width: 500px;
+	max-width: calc(100vw - 10px);
 }

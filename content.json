@@ -48,7 +48,12 @@
 		"Aliens vs Humans": {
 			"img": "img/avh.png",
 			"desc": "3rd person top down shooter where you play as the last human and deploy turrets to kill aliens.\nArt: Aaron Lee\n",
-			"link": "avh-hosted"
+			"link": "https://saltyJeff.github.io/avh-hosted"
+		},
+		"Salty Site": {
+			"img": "img/saltysite.png",
+			"desc": "A very raw demo of an experimental new custom CMS. Uses ReactJS and Webpack to create a web editor.\nClick the demo page when you login and then click any HTML element on the top, it will spawn a JSON editor that allows you to modify its traits",
+			"link": "https://saltyjeff.github.io/saltysite"
 		},
 		"PHP Setup": {
 			"img": "img/phpsetup.png",
