@@ -73,7 +73,13 @@ fetch("content.json")
 			var templateContent = projTemplate.content.cloneNode(true)
 			templateContent.querySelector('h2').textContent = proj
 			var detailList = templateContent.querySelector('p')
-			detailList.textContent = details.desc
+			detailList.childNodes[0].textContent = details.desc
+			if(details.link) {
+				var a = templateContent.querySelector('.projectLink')
+				console.log(templateContent)
+				a.textContent = details.link
+				a.href = details.link
+			}
 			var projImg = templateContent.querySelector('img')
 			projImg.src = details.img
     		projWrapper.appendChild(
@@ -106,17 +112,23 @@ function toggleProj(proj) {
 function openProj(proj) {
 	var desc = proj.querySelector('.projectDesc')
 	desc.style.height = 'auto'
-	console.log(desc.clientHeight)
-	var descHeight = Math.min(desc.offsetHeight+20, 400)
+	desc.style.flex = 'none'
+	desc.style.transition = 'none'
+	var descHeight = desc.offsetHeight + 25
 	proj.style.height = 530 + descHeight + 'px'
 
 	proj.classList.toggle('expandProj', true)
 	proj.querySelector('.expandProject').textContent = 'keyboard_arrow_up'
+	desc.style.flex = 1
+	desc.style.transition = 'all 1s'
 }
 
 function closeProj(proj) {
 	proj.classList.toggle('expandProj', false)
 	proj.querySelector('.expandProject').textContent = 'keyboard_arrow_down'
 	proj.style.height = '530px';
-	proj.querySelector('.projectDesc').style.height = 0
+	var desc = proj.querySelector('.projectDesc')
+	desc.style.height = 0
+	desc.style.flexGrow = 0
+	desc.style.flexShrink = 1
 }

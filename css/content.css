@@ -74,7 +74,7 @@ div.xp > h2 {
 .project {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	height: 530px;
-	width: 300px;
+	width: 350px;
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
@@ -105,10 +105,15 @@ div.xp > h2 {
 	flex-grow: 0;
 	flex-shrink: 1;
 	overflow: hidden;
-	transition: all 1s;
 	font-size: 18px;
 	height: 0px;
 	margin: 0px;
+	white-space: pre-line;
+	text-align: justify;
+}
+.projectLink {
+	display: block;
+	word-wrap: break-word;
 }
 .expandProject {
 	font-size: 80px;
@@ -120,7 +125,5 @@ div.xp > h2 {
 }
 .expandProj > .projectDesc {
 	flex: 1;
-	overflow-y: auto;
-	overflow-x: hidden;
 	padding: 5px;
 }

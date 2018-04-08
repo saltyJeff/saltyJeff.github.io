@@ -42,15 +42,18 @@
 	"projects": {
 		"Health ID": {
 			"img": "img/healthid.gif",
-			"desc": "App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon"
+			"desc": "App to scan and create patient codes which can be used in emergency situations to get quick information about the person in question. Won the honorable mention award at the Brother Hackathon 2018.\n\nApp writen in RiotJS for the frontend webapp (so anyone with a QR code can access and read codes). Java is used for the Android frontend (to natively hook into the label printer)\n",
+			"link": "https://github.com/saltyJeff/HealthID"
 		},
-		"A ID": {
-			"img": "img/healthid.gif",
-			"desc": "App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon"
+		"Aliens vs Humans": {
+			"img": "img/avh.png",
+			"desc": "3rd person top down shooter where you play as the last human and deploy turrets to kill aliens.\nArt: Aaron Lee\n",
+			"link": "avh-hosted"
 		},
-		"HeBalth ID": {
-			"img": "img/healthid.gif",
-			"desc": "App to scan and create patient codes. Honorable mention award winning at the Brother Hackathon"
+		"PHP Setup": {
+			"img": "img/phpsetup.png",
+			"desc": "A PHP and SQLite3 setup wizard written in Java Swing\n",
+			"link": "https://github.com/saltyJeff/phpsetup"
 		}
 	}
 }
