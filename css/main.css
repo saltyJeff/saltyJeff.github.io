@@ -1,129 +1,52 @@
 html, body {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	font-family: 'Roboto', sans-serif;
 	margin: 0px;
 	padding: 0px;
-}
-body {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-}
-#contentWrapper {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-#content {
-	flex: 1;
-	position: relative;
-	overflow-y: auto;
-	background-color: white;
-	color: black;
 	scroll-behavior: smooth;
-	padding-left: 10px;
 }
-#appbar {
-	background-color: black;
-}
-#menuButton {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 50px;
-	width: 50px;
-	font-size: 40px;
-	line-height: 50px;
-	text-align: center;
-	background-color: grey;
-	color: white;
-	z-index: 1;
-}
-#nav {
-	opacity: 0;
-	height: 100%;
-    width: 0;
-    z-index: 1;
-    overflow-x: hidden; 
-	transition: 0.5s;
-	transition-timing-function: cubic-bezier(0.45, 0, 0.2, 1);
-	box-sizing: border-box; 
-	background-color: #555;
-}
-#nav.open {
-	width: 300px;
-}
-#infoWrapper {
-	margin-bottom: 20px;
-}
-#topInfoWrapper {
+section {
 	width: 100%;
-	font-size: 20px;
-	color: white;
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 20px;
-	margin-top: 40px;
-}
-#info {
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
-#head {
-	display: block;
-	border-radius: 50%;
-	border: 2px solid white;
-	height: 120px;
-	width: 120px;
-	margin: 0px;
-	background: radial-gradient(lightskyblue, lightblue, white);
-}
-#links {
-	height: 40px;
-	width: 100%;
+section > div.spacer {
 	display: flex;
-	flex-direction: row;
-}
-#links a {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-	height: 40px;
-}
-#links a > img {
-	height: 40px;
-}
-.spacer {
 	flex: 1;
+	justify-content: flex-end;
+	text-align: center;
+	flex-direction: column;
 }
-@media screen and (max-width: 760px) {
-	#nav {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-	}
-	#infoWrapper {
-		margin-top: 60px;
-	}
+p, h3 {
+	font-size: 14pt;
 }
-a.navButton {
+.scroll-button {
+	font-size: 5vmin;
+	margin-bottom: 15px;
 	display: block;
-	color: white;
-	cursor: pointer;
-	margin-bottom: 10px;
-	font-size: 35px;
-	line-height: 40px;
-	height: 40px;
-	white-space: nowrap;
-	height: 40px;
-	padding: 8px 8px 8px 32px;
-	font-size: 25px;
-	text-decoration-line: none;
+	font-size: 15pt;
 }
-a.navButton:hover {
-	background-color: black;
-	border-right: 2px solid lightgrey;
+h1, h2, h3, p, ul, li {
+	margin: 0px;
+	padding: 2px;
+}
+h1 {
+	font-size: 10vmin;
+	text-align: center;
+	font-family: 'Kalam', 'serif';
+}
+a {
+	display: inline-block;
+	cursor: pointer;
+	color: blue;
+}
+.emoji {
+	text-decoration: none;
+	font-size: 1.5em;
+}
+a > img {
+	height: 8vmin;
+	margin: 0 20px;
 }

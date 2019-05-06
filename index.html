@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kalam|Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/content.css" rel="stylesheet">
 	<link rel="shortcut icon" href="/favicon.png">
-	<script src="js/microflux.min.js"></script>
-	<script async defer src="js/main.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<noscript>
-		<h1>Enable JS to use this page on mobile</h1>
-	</noscript>
-	<nav id="nav">
-		<div id="infoWrapper">
-			<div id="topInfoWrapper">
-				<div class="spacer"></div>
-				<div id="info">
-					<img src="img/jeff_head.png" id="head" />
-					<span>Jefferson Lee</span>
-				</div>
-				<div class="spacer"></div>
-			</div>
-			<div id="links">
+	<section id="intro">
+		<div class="spacer"></div>
+		<div id="intro-content">
+			<h1 id="tagline">Hi! I'm Jefferson<wbr><a class="emoji" href="#contact-header">👋</a></h1>
+			<h2 id="self-desc">
 				<a href="https://github.com/saltyJeff" title="link to saltyJeff @ Github">
-					<img src="img/github.png"/>
-				</a>
+					<img src="img/github.png"/></a>
 				<a href="https://www.linkedin.com/in/jefferson-lee-a30466155/" title="link to Jefferson Lee @ LinkedIn">
-					<img src="img/linkedin.png"/>
-				</a>
-			</div>
-		</div>
-		<a class="navButton" href="#about-me">About Me</a>
-		<a class="navButton" href="#experience">Experience</a>
-		<a class="navButton" href="#projects">Projects</a>
-		<a class="navButton" href="#contact">Contact</a>
-	</nav>
-	<div id="contentWrapper">
-		<i id="menuButton" class="material-icons" style="cursor: pointer">menu</i>
-		<div id="content">
-			<div id="about-me">
-				<div id="aboutContent">
-					<h1 class="aboutTitle">Jefferson Lee</h1>
-					<p><i>Programmer, Sci-Fi nerd, Panda afficionado</i></p>
-					<p>Woodbridge High Class of 2018, currently residing in Irvine, CA</p>
-					<h2>About Me</h1>
-						<p>
-							I'm a high school student who's currently taking courses at Irvine
-							Valley College and looking for some work experience. If you're a project manager and take on an unpaid intern, please
-							go to the contact button in the side menu.
-						</p>
-				</div>
-				<a href="#experience" id="aboutDown">
-					<i class="material-icons">arrow_drop_down_circle</i>
-				</a>
-			</div>
-			<p>By User:jballeis (Own work) <a href="https://creativecommons.org/licenses/by-sa/3.0">[CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]</a>, via Wikimedia Commons</p>
-			<h1 id="experience">Experience</h1>
-			<div id="xpWrapper">
-				
-			</div>
-			<h1 id="projects">Projects</h1>
-			<div id="projWrapper">
-				
-			</div>
-			<h1 id="contact">Contact</h1>
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
-			    frameborder="0" marginheight="0" marginwidth="0" id="contactFrame">Loading...</iframe>
-		</div>
-	</div>
-	<template id="xpTemplate">
-		<div class="xp">
-			<h2>Education</h2>
-			<ul>
+					<img src="img/linkedin.png"/></a>
+			</h2>
+			<h2 id="self-desc">I write code<a class="emoji" id="skills-lnk" href="#skills-header">⌨️</a>that goes in:</h2>
+			<ul id="deploy-list">
+				<li>Backends <a class="emoji" id="backend-lnk" href="#backends">💾</a></li>
+				<li>Frontends <a class="emoji" id="frontend-lnk" href="#frontends">💻</a></li>
+				<li>Video Games <a class="emoji" id="videogames-lnk" href="#videogames">🎮</a></li>
+				<li>Rockets <a class="emoji" id="rockets-lnk" href="#uclarp">🚀</a></li>
+				<li>Satellites <a class="emoji" id="satellites-lnk" href="#elfin">📡</a></li>
 			</ul>
+			<br>
 		</div>
-	</template>
-	<template id="projTemplate">
-		<div class="project">
-			<div class="projectCard">
-				<img/>
-				<hr>
-				<h2></h2>
-			</div>
-			<p class="projectDesc">
-				abc
-				<a class="projectLink">bcd</a>
-			</p>
-			<i class="material-icons expandProject"
-				onclick="toggleProj(this.parentElement)">keyboard_arrow_down</i>
+		<div class="spacer">
+			<h3>Click on an icon to jump to a section, or scroll to</h3>
+			<a class="scroll-button" href="#skills-header">👇 Read More 👇</a>
 		</div>
-	</template>
+	</section>
+	<section id="skills" class="boring">
+		<h1 id="skills-header">Skills</h1>
+		<h2 id="web-langs">Web Development 🌎</h2>
+		<ul>
+			<li>NodeJS</li>
+			<li>Typescript</li>
+			<li>HTML, CSS, JS</li>
+			<li>React</li>
+			<li>Express</li>
+			<li>MongoDB</li>
+			<li>SQL</li>
+			<li>AWS</li>
+			<li>Microservices</li>
+		</ul>
+		<h2 id="embedded-langs">Embedded Systems ⚡</h2>
+		<ul>
+			<li>C / C++</li>
+			<li>Rust</li>
+			<li>68k / PIC18 assembly</li>
+			<li>Discrete logic</li>
+		</ul>
+		<h2 id="app-langs">Desktop/Mobile Apps 📱</h2>
+		<ul>
+			<li>Kotlin</li>
+			<li>Android</li>
+			<li>React-Native</li>
+			<li>Flutter</li>
+			<li>C#</li>
+			<li>Python</li>
+			<li>Java</li>
+		</ul>
+		<h2 id="videogame-langs">Video Game Engines 🎮</h2>
+		<ul>
+			<li>Unity3D</li>
+			<li>Google Cardboard</li>
+			<li>Gamemaker</li>
+		</ul>
+		<h2 id="misc-langs">Misc 🤔</h2>
+		<ul>
+			<li>CMD / Powershell</li>
+			<li>Bash</li>
+			<li>Perl</li>
+			<li>Git</li>
+			<li><a style="font-size: inherit" href="https://open.spotify.com/playlist/623fJ1kVUCx6jJ5JP05y3l">Kpop Curation</a></li>
+			<li>Mandarin / Cantonese</li>
+		</ul>
+		<div class="spacer">
+			<a class="scroll-button" href="#proj-header">👇 Projects 👇</a>
+		</div>
+	</section>
+	<section id="projects" class="boring">
+		<h1 id="proj-header">Projects</h1>
+		<h2 id="backends">Backend projects 💾</h2>
+		<h2 id="frontends">Frontend projects 💻</h2>
+		<h2 id="videogames">Video Games 🎮</h2>
+		<h2 id="uclarp">UCLA Rocket Project 🚀</h2>
+		<h2 id="elfin">ELFIN Lab 📡</h2>
+		<div class="spacer">
+			<a class="scroll-button" href="#contact-header">👇 Contact 👇</a>
+		</div>
+	</section>
+	<section id="contact">
+		<h1 id="contact-header">Contact Form</h1>
+		<iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
+			frameborder="0" marginheight="0" marginwidth="0" id="contactFrame">Loading...</iframe>
+		<div class="spacer">
+			<a class="scroll-button" href="#intro" style="font-size: 40pt; text-decoration: none;">🔝</a>
+		</div>
+	</section>
+	<script>
+		console.log("If you're looking here I'm assuming you're a web dev")
+		console.log("This page is nothing but vanilla HTML/CSS to target a fast load time\n(I was sick of it taking forever to load other people's profile websites on convention-speed Wifi)")
+		console.log('Github: https://github.com/saltyJeff')
+		console.log('LinkedIn: https://www.linkedin.com/in/jefferson-lee-a30466155/')
+	</script>
 </body>
 </html>

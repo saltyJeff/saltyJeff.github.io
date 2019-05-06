@@ -1,131 +1,43 @@
-h1 {
-	margin-top: 0px;
-	padding-top: 60px;
-}
-li {
-	margin: 0 0 5px 0;
-}
-#about-me {
-	margin-left: -10px;
-	background-image: url("../img/panda.jpg");
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-position: 30% center;
-	background-size: cover;
-	display: flex;
-  	align-items: center;
-	justify-content: center;
-	position: relative;  
-}
-#aboutContent {
-	border: 1px solid white;
-	width: 80%;
-	max-width: 500px;
+#self-desc {
+	font-size: 5vmin;
 	text-align: center;
-	padding: 20px;
-	box-shadow: inset -5px -5px 25px 3px white;
-	background-color: rgba(0, 0, 20, 0.6);
-	color: white;
+	font-family: 'Roboto', sans-serif;
 }
-.aboutTitle {
-	font-size: 60px;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-}
-#aboutDown {
-	position: absolute;
-	bottom: 10px;
-	left: calc(100% / 2);
-	transform: translate(-50%, 0%);
+#deploy-list {
+	list-style: none;
 	text-align: center;
-	color: black;
+	font-family: 'Roboto', sans-serif;
 }
-#aboutDown > i {
-	font-size: 60px;
+#deploy-list > li {
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 5px;
 }
-#contactFrame {
-	margin-left: -10px;
-	display: block;
-	width: 100%;
-	height: 1100px;
+.boring {
+	padding: 10px;
+	box-sizing: border-box;
 }
-#xpWrapper {
+.boring > h2 {
+	font-size: 22pt;
+}
+.boring > ul {
+	list-style: none;
 	display: flex;
-	flex-direction: row;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
-div.xp {
-	border: 3px solid transparent;
-	margin: 8px;
-	width: 270px;
-	padding: 3px;
-}
-div.xp:hover {
-	border: 3px solid purple;
-}
-div.xp > h2 {
+.boring > ul > li {
 	text-align: center;
+	display: inline-block;
+	font-size: 16pt;
+	padding: 8px 18px;
+	margin: 4px;
+	font-weight: bold;
 }
-#projWrapper {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	position: relative;
+#contact {
+	height: initial;
 }
-.project {
-	background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	height: 530px;
-	width: 350px;
-	display: flex;
-	flex-direction: column;
-	margin: 20px;
-	transition: height 1s, width 0.5s;
-}
-.project:hover {
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.projectCard {
-	height: 450px;
-	width: 100%;
-	overflow: hidden;
-}
-.projectCard > img {
-	display: block;
-	margin: auto auto;
-	height: calc(100% - 80px);
-	width: auto;
-	text-align: center;
-}
-.projectCard > h2 {
-	height: 60px;
-	margin: 3px;
-	padding-left: 10px;
-	font-size: 30px;
-}
-.projectDesc {
-	flex-grow: 0;
-	flex-shrink: 1;
-	overflow: hidden;
-	font-size: 18px;
-	height: 0px;
-	margin: 0px;
-	white-space: pre-line;
-	text-align: justify;
-}
-.projectLink {
-	display: block;
-	word-wrap: break-word;
-}
-.expandProject {
-	font-size: 80px;
-	width: 100%;
-	line-height: 80px;
-	cursor: pointer;
-	height: 50px;
-	text-align: center;
-}
-.expandProj {
-	width: 500px;
-	max-width: calc(100vw - 10px);
+#form {
+	height: 820px;
+	flex: 1;
 }
