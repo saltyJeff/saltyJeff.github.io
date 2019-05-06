@@ -1,4 +1,4 @@
-#self-desc {
+.self-desc {
 	font-size: 5vmin;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
@@ -34,10 +34,32 @@
 	margin: 4px;
 	font-weight: bold;
 }
+#projects > ul > li {
+	text-align: left;
+	width: 90%;
+	font-weight: normal;
+}
 #contact {
 	height: initial;
 }
 #form {
 	height: 820px;
 	flex: 1;
+}
+
+#hand {
+	animation: wave 0.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 2;
+}
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }

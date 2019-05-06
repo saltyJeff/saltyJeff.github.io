@@ -12,20 +12,20 @@
 	<section id="intro">
 		<div class="spacer"></div>
 		<div id="intro-content">
-			<h1 id="tagline">Hi! I'm Jefferson<wbr><a class="emoji" href="#contact-header">👋</a></h1>
-			<h2 id="self-desc">
+			<h1 id="tagline">Hi! I'm Jefferson<wbr><a class="emoji" href="#contact-header" id="hand">👋</a></h1>
+			<h2 class="self-desc">
 				<a href="https://github.com/saltyJeff" title="link to saltyJeff @ Github">
 					<img src="img/github.png"/></a>
 				<a href="https://www.linkedin.com/in/jefferson-lee-a30466155/" title="link to Jefferson Lee @ LinkedIn">
 					<img src="img/linkedin.png"/></a>
 			</h2>
-			<h2 id="self-desc">I write code<a class="emoji" id="skills-lnk" href="#skills-header">⌨️</a>that goes in:</h2>
+			<h2 class="self-desc">I write code<a class="emoji" id="skills-lnk" href="#skills-header">⌨️</a>that goes in:</h2>
 			<ul id="deploy-list">
 				<li>Backends <a class="emoji" id="backend-lnk" href="#backends">💾</a></li>
-				<li>Frontends <a class="emoji" id="frontend-lnk" href="#frontends">💻</a></li>
+				<li>Frontends/Apps <a class="emoji" id="frontend-lnk" href="#frontends">💻</a></li>
 				<li>Video Games <a class="emoji" id="videogames-lnk" href="#videogames">🎮</a></li>
 				<li>Rockets <a class="emoji" id="rockets-lnk" href="#uclarp">🚀</a></li>
-				<li>Satellites <a class="emoji" id="satellites-lnk" href="#elfin">📡</a></li>
+				<!--<li>Satellites <a class="emoji" id="satellites-lnk" href="#elfin">📡</a></li>-->
 			</ul>
 			<br>
 		</div>
@@ -86,11 +86,29 @@
 	</section>
 	<section id="projects" class="boring">
 		<h1 id="proj-header">Projects</h1>
-		<h2 id="backends">Backend projects 💾</h2>
-		<h2 id="frontends">Frontend projects 💻</h2>
+		<h2 id="backends">Backends 💾</h2>
+		<ul>
+			<li><b>Skyebrowse API Server:</b> Created the API server for Skyebrowse using a microservice architecture implemented on NodeJS and AWS</li>
+			<li><b>NRC:</b> A Kotlin server that served as the coordinator for an experimental social networking site</li>
+		</ul>
+		<h2 id="frontends">Frontends/Apps 💻</h2>
+		<ul>
+			<li><b><a href="https://saltyjeff.github.io/HealthID/edit.html">HealthID:</a></b> A health info system with a combination web and Android app; won honorable mention at the Brother Hackathon.</li>
+			<li><b><a href="https://saltyJeff.github.io/ds-engine">DS-Engine:</a></b> A <s>dating simulator</s> visual novel engine written in React with MobX with a declarative YAML game format.</li>
+			<li><b><a href="https://saltyJeff.github.io/saltysite">Web Editor:</a></b> A WYSIWYG website editor on the web that takes advantage of WebComponents to intuitively layout websites.</li>
+		</ul>
 		<h2 id="videogames">Video Games 🎮</h2>
+		<ul>
+			<li><b>Castle Attack:</b> Multiplayer WebRTC tower defense game; won best video game at Code Day LA.</li>
+			<li><b>Spicy Moon:</b> Collaborative platformer game involving hot sauce and lemonade; won a Tilted Shed Game Jam.</li>
+			<li><b><a href="avh-hosted/index.html">Aliens Vs Humans:</a></b> 2D tower defense game where you defend a target from swarms of aliens.</li>
+		</ul>
 		<h2 id="uclarp">UCLA Rocket Project 🚀</h2>
-		<h2 id="elfin">ELFIN Lab 📡</h2>
+		<ul>
+			<li><b><a href="https://github.com/saltyJeff/launchpad">Launchpad:</a></b> A all in one solution for benchmarking, modularizing code, reading telemetry data, and converting telemetry information from the avionics bay on the rocket.</li>
+			<li><b><a href="https://github.com/saltyJeff/ares-2019">Ares 2019:</a></b> The code deployed on the rocket for the 2018-2019 season, made with Launchpad</li>
+		</ul>
+		<!--<h2 id="elfin">ELFIN Lab 📡</h2>-->
 		<div class="spacer">
 			<a class="scroll-button" href="#contact-header">👇 Contact 👇</a>
 		</div>
@@ -98,7 +116,7 @@
 	<section id="contact">
 		<h1 id="contact-header">Contact Form</h1>
 		<iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSePTqWUpZVAcCDJ8M6JAhIKVq6I14VIR9qslnZrlwcLCS4_KA/viewform?embedded=true"
-			frameborder="0" marginheight="0" marginwidth="0" id="contactFrame">Loading...</iframe>
+			frameborder="0" marginheight="0" marginwidth="0" id="contactFrame">Loading Contact Form...</iframe>
 		<div class="spacer">
 			<a class="scroll-button" href="#intro" style="font-size: 40pt; text-decoration: none;">🔝</a>
 		</div>
